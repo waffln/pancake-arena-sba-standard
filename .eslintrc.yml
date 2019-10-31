@@ -1,0 +1,46 @@
+env:
+  browser: true
+  es6: true
+  jquery: true
+extends: eslint:recommended
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+parserOptions:
+  ecmaVersion: 2016
+rules:
+  indent: [error, 2]
+  linebreak-style: [error, windows]
+  quotes: [error, double, {avoidEscape: true, allowTemplateLiterals: true}]
+  semi: [error, never]
+  no-var: error
+  
+  array-bracket-newline: [warn, {multiline: true}]
+  array-bracket-spacing: warn
+
+  brace-style: [error, 1tbs, {allowSingleLine: false}]
+  curly: [error, multi-or-nest, consistent]
+
+  no-template-curly-in-string: warn
+
+  # misc
+  wrap-iife: [error, inside]
+  consistent-return: error
+  eqeqeq: warn
+  no-empty-function: error
+  no-eval: error
+  no-global-assign: error
+  no-extra-bind: error
+  no-extra-label: error
+  no-implicit-coercion: error
+  no-implied-eval: error
+  no-lone-blocks: error
+  no-multi-str: error
+  eol-last: error
+
+  # code cleanliness
+  no-multi-spaces: error
+  no-extra-parens: [error, all]
+  comma-dangle: [error, never]
+  keyword-spacing: error
+  space-before-function-paren: [error, never]

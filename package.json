@@ -1,0 +1,16 @@
+{
+  "name": "sba-standard",
+  "version": "1.0.0",
+  "description": "Standard web-based overlay for Scoreboard-Assistant",
+  "author": "waffeln",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "3.1.1",
+    "node-sass": "^4.13.0",
+    "pug": "^2.0.4",
+    "reconnecting-websocket": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0"
+  }
+}

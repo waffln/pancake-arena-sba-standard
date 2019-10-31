@@ -1,0 +1,33 @@
+mixin bannerSide(num)
+  .score
+    h2(data-tab="vrsmash" data-sb=`score${num}`) 0
+  img.char-icons.force(data-tab="vrsmash" data-sb=`image${num}` src="./img/chars/!blank.png")
+  h4.playerName(data-tab="vrsmash" data-sb=`player${num}`)= `Player ${num}`
+
+html
+  head
+    link(rel="stylesheet" href="css/style.css")
+  body
+    #topGroup.hidden
+      #banner
+        #left.left-skew
+          +bannerSide(1)
+        #middle.double-skew
+          h5(data-tab="vrsmash" data-sb="game") Title
+          h5#round(data-tab="vrsmash" data-sb="match") Round
+        #right
+          +bannerSide(2)
+      #subBar.double-skew.hidden
+          div.left
+            h6.left(data-tab="vrsmashmisc" data-sb="text1")=" - "
+          img(src="img/headset.jpeg")
+          div
+            h6.right(data-tab="vrsmashmisc" data-sb="text2")=" - "
+            
+    script(src="./node_modules/jquery/dist/jquery.min.js")
+    script(src="./node_modules/reconnecting-websocket/dist/reconnecting-websocket-iife.min.js")
+    script.
+      const loadedAnim = () => {
+        $("#topGroup").animate({opacity: 1}, "fast")
+      }
+    script(src="js/sba-new.js")

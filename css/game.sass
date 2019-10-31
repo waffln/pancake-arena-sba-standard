@@ -1,0 +1,91 @@
+#topGroup
+  display: flex
+  flex-direction: column
+  align-items: center
+
+#banner
+  width: 1200px
+  height: 50px
+  margin-top: 30px
+  background: #ddd
+
+  display: flex
+  justify-content: center
+
+  > *
+    background: white
+    display: flex
+    align-items: center
+
+#left, #right
+  flex: 1
+
+.score
+  width: 50px
+  background: hsl(0, 0%, 20%)
+  color: white
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+
+#left .char-icons.left,
+#right .char-icons.right
+      margin-left: 0.5rem
+      margin-right: 0.2rem
+
+#left .char-icons.right,
+#right .char-icons.left
+      margin-left: 0.2rem
+      margin-right: 0.5rem
+
+
+#left .score
+  margin-left: calc(var(--banner-skew) * -1)
+  
+#right .score
+  margin-right: calc(var(--banner-skew) * -1)
+
+.char-icons
+  width: 38px
+  height: auto
+
+.force
+  margin: 0 0.5rem !important
+
+#left
+  clip-path: polygon(-100% 0, calc(100% - var(--banner-skew)) 0, 100% 100%, -100% 100%)
+
+#right
+  clip-path: polygon(var(--banner-skew) 0, 200% 0, 200% 100%, 0 100%)
+
+  flex-direction: row-reverse
+
+#middle
+  --shift: 3px
+  margin: 0 calc(var(--banner-skew) * -1 + var(--shift))
+  width: 25%
+  flex-direction: column
+  justify-content: center
+
+#subBar
+  height: 17px
+  width: 300px
+  margin-top: 5px
+  background: white
+  color: black
+  display: flex
+  justify-content: center
+  align-items: center
+
+  > div
+    flex: 1
+    display: flex
+    align-items: center
+
+    &.left
+      justify-content: flex-end
+
+  > img
+    height: 90%
+    margin: 0 0.5rem
